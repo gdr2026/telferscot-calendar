@@ -52,15 +52,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .pill-trip{background:#bee3f8;color:#2c5282}.pill-action{background:#fef3c7;color:#92400e}.pill-show{background:#e9d8fd;color:#553c9a}.pill-closure{background:#fed7d7;color:#822727}.pill-general{background:#e2e8f0;color:#4a5568}.pill-sports{background:#c6f6d5;color:#276749}.pill-club{background:#e0e7ff;color:#3730a3}.pill-todo{background:#d1fae5;color:#065f46;border:1px solid #6ee7b7}.pill-costume{background:#fde68a;color:#78350f;border:1.5px dashed #d97706}
 .more-events { font-size: 0.58rem; color: #718096; padding: 0 2px; }
 
-/* Lunch chips on calendar */
-.lunch-chips { display: flex; flex-direction: column; gap: 2px; margin-top: 2px; }
-.lunch-chip { display: flex; align-items: center; gap: 3px; border-radius: 4px; padding: 2px 4px; border: 1px solid #f6d860; background: #fef9ec; overflow: hidden; }
-.lunch-chip-av { width: 13px; height: 13px; border-radius: 50%; font-size: 7px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.lunch-chip-text { font-size: 0.6rem; color: #78350f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
-/* side by side when 2 children */
-.lunch-chips.side-by-side { flex-direction: row; }
-.lunch-chips.side-by-side .lunch-chip { flex: 1; min-width: 0; }
-
 /* ── WEEK VIEW ── */
 .week-grid { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid #e2e8f0; }
 .week-col { border-right: 1px solid #f0f4f8; }
@@ -72,9 +63,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .week-col-header.holiday-col { background: #fff5f5; }
 .week-col-body { padding: 6px 5px; min-height: 160px; }
 .week-event { font-size: 0.68rem; border-radius: 5px; padding: 3px 5px; margin-bottom: 3px; font-weight: 500; cursor: pointer; line-height: 1.4; }
-.week-lunch-chip { display: flex; align-items: center; gap: 4px; border-radius: 5px; padding: 4px 5px; margin-bottom: 3px; border: 1px solid #f6d860; background: #fef9ec; }
-.week-lunch-av { width: 16px; height: 16px; border-radius: 50%; font-size: 8px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.week-lunch-text { font-size: 0.68rem; color: #78350f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; }
 
 /* ── DAY VIEW ── */
 .day-view { padding: 16px; }
@@ -85,11 +73,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .day-event-icon { font-size: 1rem; flex-shrink: 0; }
 .day-event-title { font-size: 0.82rem; font-weight: 600; color: #1a202c; }
 .day-event-sub { font-size: 0.72rem; color: #718096; margin-top: 2px; }
-.day-lunch-cards { display: flex; gap: 8px; flex-wrap: wrap; }
-.day-lunch-card { flex: 1; min-width: 100px; border: 1px solid #f6d860; background: #fef9ec; border-radius: 8px; padding: 8px 10px; display: flex; align-items: center; gap: 8px; }
-.day-lunch-card-av { width: 28px; height: 28px; border-radius: 50%; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.day-lunch-card-name { font-size: 0.72rem; font-weight: 700; color: #78350f; }
-.day-lunch-card-food { font-size: 0.78rem; color: #2d3748; margin-top: 1px; }
 .day-empty { font-size: 0.82rem; color: #718096; padding: 20px; text-align: center; }
 
 .legend { display: flex; flex-wrap: wrap; gap: 7px; padding: 9px 16px; border-top: 1px solid #f0f4f8; }
@@ -109,29 +92,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .tag-urgent{background:#fed7d7;color:#822727}.tag-week{background:#fef3c7;color:#92400e}
 .alerts-section-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #718096; padding: 7px 16px 3px; background: #f7fafc; border-bottom: 1px solid #f0f4f8; }
 .alerts-empty { padding: 8px 16px; font-size: 0.78rem; color: #718096; }
-.scopay-btn { display: inline-flex; align-items: center; gap: 4px; margin-top: 5px; padding: 3px 9px; background: #0d1b3e; color: #f5c518; border: none; border-radius: 7px; font-size: 0.68rem; font-weight: 600; cursor: pointer; text-decoration: none; }
-.scopay-btn svg { width: 10px; height: 10px; fill: #f5c518; }
-
-/* Family */
-.child-row { padding: 10px 16px; border-bottom: 1px solid #f0f4f8; }
-.child-row:last-child { border-bottom: none; }
-.child-top { display: flex; align-items: center; gap: 9px; }
-.child-avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
-.child-name-text { font-size: 0.84rem; font-weight: 700; color: #1a202c; }
-.child-year-text { font-size: 0.72rem; color: #718096; }
-.child-remove { margin-left: auto; background: none; border: none; cursor: pointer; color: #cbd5e0; font-size: 1.1rem; line-height: 1; padding: 2px; border-radius: 4px; }
-.child-remove:hover { color: #e53e3e; background: #fff5f5; }
-.today-lunch-pill { margin-top: 6px; font-size: 0.72rem; color: #78350f; background: #fef9ec; border: 1px solid #f6d860; border-radius: 6px; padding: 3px 8px; display: inline-flex; align-items: center; gap: 4px; }
-.lunch-plan-btn { margin-top: 7px; width: 100%; padding: 5px; font-size: 0.72rem; font-weight: 600; color: #78350f; background: #fef9ec; border: 1px solid #f6d860; border-radius: 7px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; }
-.lunch-plan-btn:hover { background: #fef3c7; }
-.no-children-msg { padding: 16px; font-size: 0.78rem; color: #718096; text-align: center; line-height: 1.6; }
-.add-child-form { padding: 12px 16px; border-top: 1px solid #f0f4f8; background: #f7fafc; }
-.add-child-form input,.add-child-form select { width:100%;font-size:0.78rem;padding:6px 8px;border:1px solid #e2e8f0;border-radius:7px;margin-bottom:6px;background:white;color:#2d3748;font-family:inherit;outline:none; }
-.add-child-form input:focus,.add-child-form select:focus { border-color:#0d1b3e; }
-.add-form-btns { display:flex;gap:6px; }
-.btn-save { flex:1;padding:6px;background:#0d1b3e;color:#f5c518;border:none;border-radius:7px;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:inherit; }
-.btn-save:hover{background:#1a2f5e}
-.btn-cancel { padding:6px 12px;background:white;color:#718096;border:1px solid #e2e8f0;border-radius:7px;font-size:0.78rem;cursor:pointer;font-family:inherit; }
 
 /* Clubs */
 .clubs-section { padding: 10px 16px; border-bottom: 1px solid #f0f4f8; }
@@ -143,31 +103,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .signup-alert{background:#fef3c7;border-radius:7px;padding:7px 9px;margin-top:5px;font-size:0.72rem;color:#92400e;display:flex;gap:5px;align-items:flex-start}
 .clubs-contact{font-size:0.7rem;color:#718096;margin-top:3px}
 .clubs-contact a{color:#1a2f5e}
-
-/* ScoPay */
-.scopay-connect{background:linear-gradient(135deg,#0d1b3e,#1a2f5e);border-radius:10px;padding:12px 16px;margin:0 16px 12px}
-.scopay-connect h4{color:#f5c518;font-size:0.82rem;margin-bottom:5px}
-.scopay-connect p{color:rgba(255,255,255,0.75);font-size:0.72rem;margin-bottom:9px;line-height:1.5}
-.scopay-connect input{width:100%;padding:6px 9px;border-radius:7px;border:none;font-size:0.78rem;margin-bottom:6px}
-.scopay-connect button{width:100%;padding:7px;background:#f5c518;color:#0d1b3e;border:none;border-radius:7px;font-size:0.78rem;font-weight:700;cursor:pointer}
-.scopay-status{font-size:0.7rem;color:#68d391;margin-top:5px;display:none}
-
-/* Lunch planner modal */
-.lp-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:200;align-items:center;justify-content:center}
-.lp-overlay.open{display:flex}
-.lp-modal{background:white;border-radius:16px;padding:20px;width:94%;max-width:500px;max-height:85vh;overflow-y:auto}
-.lp-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.lp-header h2{font-size:0.98rem;font-weight:700;color:#0d1b3e;flex:1}
-.lp-close{background:none;border:none;font-size:1.4rem;cursor:pointer;color:#718096}
-.lp-week-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#718096;padding:5px 0 4px;margin-top:4px;border-bottom:1px solid #e2e8f0;margin-bottom:7px}
-.lp-day-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
-.lp-day-name{font-size:0.75rem;font-weight:600;color:#4a5568;width:62px;flex-shrink:0}
-.lp-day-date{font-size:0.68rem;color:#718096;width:42px;flex-shrink:0}
-.lp-input{flex:1;font-size:0.78rem;padding:5px 8px;border:1px solid #e2e8f0;border-radius:7px;font-family:inherit;outline:none;color:#2d3748}
-.lp-input:focus{border-color:#f6d860;box-shadow:0 0 0 2px #fef9ec}
-.lp-input.has-val{background:#fef9ec;border-color:#f6d860}
-.lp-save-btn{width:100%;margin-top:12px;padding:8px;background:#0d1b3e;color:#f5c518;border:none;border-radius:8px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit}
-.lp-today-tag{font-size:0.62rem;background:#0d1b3e;color:#f5c518;border-radius:3px;padding:1px 4px;margin-left:4px}
 
 /* Event modal */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:100;align-items:center;justify-content:center}
@@ -182,15 +117,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .event-name{font-size:0.88rem;font-weight:600;color:#1a202c}
 .event-action-note{font-size:0.75rem;color:#c05621;margin-top:3px}
 .event-link a{font-size:0.72rem;color:#1a2f5e}
-.scopay-info{background:#fffbeb;border:1px solid #f6e05e;border-radius:7px;padding:9px 12px;margin-top:7px;font-size:0.75rem;color:#744210}
-.modal-lunch-section{background:#fef9ec;border:1px solid #f6d860;border-radius:8px;padding:9px 12px;margin-top:8px}
-.modal-lunch-section h4{font-size:0.75rem;font-weight:700;color:#78350f;display:flex;align-items:center;gap:4px;margin-bottom:7px}
-.modal-lunch-cards{display:flex;gap:7px;flex-wrap:wrap}
-.mlc{flex:1;min-width:90px;background:white;border:1px solid #f6d860;border-radius:7px;padding:7px 9px;display:flex;align-items:center;gap:7px}
-.mlc-av{width:24px;height:24px;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mlc-name{font-size:0.7rem;font-weight:700;color:#78350f}
-.mlc-food{font-size:0.75rem;color:#2d3748}
-.mlc-empty{font-size:0.7rem;color:#a0aec0;font-style:italic}
 
 .loading{padding:32px;text-align:center;color:#718096}
 .spin{display:inline-block;animation:spin 1s linear infinite;font-size:1.4rem}
@@ -241,7 +167,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       <div class="legend-item"><div class="legend-dot" style="background:#c6f6d5"></div>Sports</div>
       <div class="legend-item"><div class="legend-dot" style="background:#d1fae5;border:1px solid #6ee7b7"></div>☑️ Book</div>
       <div class="legend-item"><div class="legend-dot" style="background:#e0e7ff"></div>Clubs</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#fef9ec;border:1px solid #f6d860"></div>🍴 Lunch</div>
     </div>
     <div class="status-bar" id="statusBar"><div class="status-dot"></div> Loading…</div>
   </div>
@@ -255,15 +180,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       <div class="card-header"><span style="font-size:.95rem">📅</span><h3>Coming Up</h3></div>
       <div id="upcomingList"><div class="loading" style="padding:16px">Loading…</div></div>
     </div>
-    <div class="card" id="familyCard">
-      <div class="card-header">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#0d1b3e"><path d="M6 7a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm-4 7a4 4 0 018 0H2zm8-7a2 2 0 100-4 2 2 0 000 4zm1.5 1.1A3.5 3.5 0 0114 11.5V14h-2v-2.5a5 5 0 00-.5-2.4z"/></svg>
-        <h3>My Family</h3>
-        <button onclick="startAddChild()" style="font-size:.7rem;padding:2px 9px;border-radius:10px;border:1px solid #cbd5e0;background:white;cursor:pointer;color:#4a5568;font-weight:600">+ Add</button>
-      </div>
-      <div id="childrenList"></div>
-      <div id="noChildrenMsg" class="no-children-msg">Add your children to plan lunches<br>and see them on the calendar.</div>
-    </div>
     <div class="card">
       <div class="card-header"><span style="font-size:.95rem">🎯</span><h3>After School Clubs</h3></div>
       <div class="clubs-section"><h4>🌅 Breakfast Club</h4><div class="clubs-row"><span>7:30am – 8:40am</span><span class="price">£9.00/session</span></div><div style="font-size:.7rem;color:#718096">Drop-off 7:30–8:00am</div></div>
@@ -271,24 +187,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       <div class="clubs-section"><h4>⭐ Extended Clubs</h4><div class="clubs-row"><span>3:30pm – 4:30pm</span><span class="price">£9.00/session</span></div><div class="clubs-list">Football · Art · Drama · Netball · Tag Rugby · Hockey · Lego · Chess · Coding · Book Club · Sewing</div><div class="signup-alert"><span style="flex-shrink:0">⏰</span><div><strong style="display:block;font-size:.7rem;margin-bottom:1px">Sign-up 7:30am on ScoPay</strong>Watch calendar for sign-up dates each term.</div></div></div>
       <div class="clubs-section"><div class="clubs-contact">Bookings: <a href="mailto:sburrows@telferscot.co.uk">sburrows@telferscot.co.uk</a></div></div>
     </div>
-    <div class="card">
-      <div class="card-header"><span style="font-size:.95rem">💳</span><h3>ScoPay</h3></div>
-      <div class="scopay-connect"><h4>Connect ScoPay</h4><p>Link your account so payment reminders open directly in your school payments portal.</p><input type="text" id="scopayEmail" placeholder="ScoPay email"/><button onclick="connectScopay()">Connect →</button><div class="scopay-status" id="scopayStatus">✓ Connected!</div></div>
-      <div style="padding:8px 16px 12px;font-size:.7rem;color:#718096;font-style:italic">Transactions happen securely on ScoPay. No payment details stored here.</div>
-    </div>
-  </div>
-</div>
-
-<!-- Lunch Planner Modal -->
-<div class="lp-overlay" id="lpOverlay">
-  <div class="lp-modal">
-    <div class="lp-header">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#78350f"><path d="M11 3H9v7c0 2.12 1.33 3.93 3.22 4.65L11 21h2l1.22-6.35C16.67 13.93 18 12.12 18 10V3h-2v5h-1V3h-2v5h-1V3zM6 3v9h2.5l-1 9H10l1-9H13V3H6z"/></svg>
-      <h2 id="lpTitle">Lunch planner</h2>
-      <button class="lp-close" id="lpClose">×</button>
-    </div>
-    <div id="lpBody"></div>
-    <button class="lp-save-btn" onclick="saveLunchPlan()">Save lunch plan</button>
   </div>
 </div>
 
@@ -302,21 +200,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 
 <script>
 const PROXY='https://api.allorigins.win/get?url='+encodeURIComponent('https://www.telferscot.co.uk/ical.ics');
-const SCOPAY_URL='https://www.scopay.com/telferscot';
-const AV_COLORS=[{bg:'#dbeafe',text:'#1e3a8a'},{bg:'#fce7f3',text:'#9d174d'},{bg:'#d1fae5',text:'#065f46'},{bg:'#fef3c7',text:'#78350f'},{bg:'#ede9fe',text:'#4c1d95'},{bg:'#fee2e2',text:'#7f1d1d'}];
 
 let allEvents=[],filteredEvents=[];
 let cY=2026,cM=2,cD=new Date();
 let view='month';
 let selectedYears=new Set(['all']);
-let scopayConnected=false;
-let children=[];
-let lpChildIdx=null;
 
 const yearKw={nursery:['nursery'],reception:['reception'],year1:['year 1','year1','y1','ks1','key stage 1'],year2:['year 2','year2','y2','ks1','key stage 1'],year3:['year 3','year3','y3','3gt','3gh','ks2','key stage 2'],year4:['year 4','year4','y4','ks2','key stage 2'],year5:['year 5','year5','y5','ks2','key stage 2'],year6:['year 6','year6','y6','ks2','key stage 2']};
 const actionKw=['costume','non-uniform','nonuniform','donation','donate','bring','jumper','uniform','collection','money','raise','wear','socks','purple','bag','food bank','bake','cake','world book day'];
 const costumeKw=['costume','world book day','fancy dress','dress up'];
-const payKw=['donation','donate','payment','pay','collection','food bank','cake sale','book fair','book stall','scopay','bake'];
 const tripKw=['trip','visit','residential','tour','theatre','museum','festival hall','bfi','parliament','temple','church','library','o2'];
 const showKw=['concert','show','performance','parade','talent','assembly','lantern'];
 const sportsKw=['football','netball','rugby','hockey','swimming','sports','cycle','tournament','match'];
@@ -327,35 +219,14 @@ const schoolWide=['school closed','inset','half term','holiday','macmillan','psa
 
 function classify(t){const s=t.toLowerCase();if(closureKw.some(k=>s.includes(k)))return'closure';if(todoKw.some(k=>s.includes(k)))return'todo';if(clubKw.some(k=>s.includes(k)))return'club';if(actionKw.some(k=>s.includes(k)))return'action';if(showKw.some(k=>s.includes(k)))return'show';if(tripKw.some(k=>s.includes(k)))return'trip';if(sportsKw.some(k=>s.includes(k)))return'sports';return'general';}
 function needsCostume(t){return costumeKw.some(k=>t.toLowerCase().includes(k));}
-function needsPayment(t){return payKw.some(k=>t.toLowerCase().includes(k));}
 function pillCls(type,title){if(type==='action'&&needsCostume(title))return'pill-costume';return{closure:'pill-closure',action:'pill-action',show:'pill-show',trip:'pill-trip',sports:'pill-sports',club:'pill-club',todo:'pill-todo',general:'pill-general'}[type]||'pill-general';}
 function isRelevant(ev,yrs){const t=ev.title.toLowerCase();if(schoolWide.some(k=>t.includes(k)))return true;if(yrs.has('all'))return true;for(const yr of yrs){if((yearKw[yr]||[]).some(k=>t.includes(k)))return true;}return false;}
 function pd(s){return new Date(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6,8));}
 function sameDay(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate();}
 function fmtDate(d){return d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});}
 function isoDate(d){return d.toISOString().slice(0,10);}
-function initials(n){return n.trim().split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);}
 function eventsForDate(d){return filteredEvents.filter(ev=>{if(sameDay(ev.start,d))return true;if(ev.end){const e=new Date(ev.end);e.setDate(e.getDate()-1);return d>=ev.start&&d<=e;}return false;});}
-function lunchesForDate(d){const key=isoDate(d);return children.map((c,i)=>c.lunches[key]?{name:c.name,lunch:c.lunches[key],idx:i}:null).filter(Boolean);}
 const evIcons={action:'🛍️',trip:'🚌',show:'🎭',closure:'🔒',sports:'⚽',todo:'☑️',club:'🎯',general:'📌'};
-
-// ── LUNCH CHIPS ──
-function lunchChipsHtml(d){
-  const lunches=lunchesForDate(d);
-  if(!lunches.length)return'';
-  const sideBySide=lunches.length>=2;
-  let html=`<div class="lunch-chips${sideBySide?' side-by-side':''}">`;
-  lunches.forEach(l=>{
-    const col=AV_COLORS[l.idx%AV_COLORS.length];
-    const ini=initials(l.name);
-    html+=`<div class="lunch-chip" title="${l.name}: ${l.lunch}">
-      <div class="lunch-chip-av" style="background:${col.bg};color:${col.text}">${ini}</div>
-      <span class="lunch-chip-text">${l.lunch}</span>
-    </div>`;
-  });
-  html+='</div>';
-  return html;
-}
 
 // ── MONTH VIEW ──
 function renderMonth(){
@@ -380,7 +251,6 @@ function renderMonth(){
         html+=`<div class="event-pill ${pillCls(ev.type,ev.title)}" title="${ev.title}">${icon}${ev.title.slice(0,19)}${ev.title.length>19?'…':''}</div>`;
       });
       if(evs.length>2)html+=`<div class="more-events">+${evs.length-2} more</div>`;
-      html+=lunchChipsHtml(d);
     }
     html+='</div>';
   }
@@ -393,7 +263,6 @@ function renderMonth(){
 // ── WEEK VIEW ──
 function renderWeek(){
   const now=new Date();
-  // find Monday of cD's week
   const mon=new Date(cD);
   const dow=(mon.getDay()+6)%7;
   mon.setDate(mon.getDate()-dow);
@@ -404,7 +273,6 @@ function renderWeek(){
   let html='<div class="week-grid">';
   weekDates.forEach((d,i)=>{
     const evs=eventsForDate(d);
-    const lunches=lunchesForDate(d);
     const isToday=sameDay(d,now);
     const isClosed=evs.some(e=>e.type==='closure');
     html+=`<div class="week-col">
@@ -418,10 +286,6 @@ function renderWeek(){
       const icon=isCos?'🎭 ':ev.type==='action'?'🛍️ ':ev.type==='todo'?'☑️ ':'';
       html+=`<div class="week-event ${pillCls(ev.type,ev.title)}" onclick="event.stopPropagation();openModal('${d.toISOString()}')" title="${ev.title}">${icon}${ev.title.slice(0,22)}${ev.title.length>22?'…':''}</div>`;
     });
-    lunches.forEach(l=>{
-      const col=AV_COLORS[l.idx%AV_COLORS.length];
-      html+=`<div class="week-lunch-chip"><div class="week-lunch-av" style="background:${col.bg};color:${col.text}">${initials(l.name)}</div><span class="week-lunch-text">${l.lunch}</span></div>`;
-    });
     html+='</div></div>';
   });
   html+='</div>';
@@ -430,11 +294,8 @@ function renderWeek(){
 
 // ── DAY VIEW ──
 function renderDay(){
-  const now=new Date();
   document.getElementById('navTitle').textContent=cD.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
   const evs=eventsForDate(cD);
-  const lunches=lunchesForDate(cD);
-  const isWe=[0,6].includes(cD.getDay());
   let html='<div class="day-view">';
   if(evs.length){
     html+='<div class="day-section-label">Events</div>';
@@ -443,31 +304,11 @@ function renderDay(){
       const icon=isCos?'🎭':evIcons[ev.type]||'📌';
       html+=`<div class="day-event-row" onclick="openModal('${cD.toISOString()}')">
         <div class="day-event-icon">${icon}</div>
-        <div><div class="day-event-title">${ev.title}</div>${needsPayment(ev.title)?`<div class="day-event-sub">💳 Payment may be required</div>`:''}</div>
+        <div><div class="day-event-title">${ev.title}</div></div>
       </div>`;
     });
   } else {
     html+='<div class="day-empty">No school events today.</div>';
-  }
-  if(!isWe){
-    html+='<div class="day-section-label">Lunch plan</div>';
-    if(lunches.length){
-      html+='<div class="day-lunch-cards">';
-      lunches.forEach(l=>{
-        const col=AV_COLORS[l.idx%AV_COLORS.length];
-        html+=`<div class="day-lunch-card"><div class="day-lunch-card-av" style="background:${col.bg};color:${col.text}">${initials(l.name)}</div><div><div class="day-lunch-card-name">${l.name.split(' ')[0]}</div><div class="day-lunch-card-food">${l.lunch}</div></div></div>`;
-      });
-      html+='</div>';
-    } else if(children.length){
-      html+='<div class="day-lunch-cards">';
-      children.forEach((c,i)=>{
-        const col=AV_COLORS[i%AV_COLORS.length];
-        html+=`<div class="day-lunch-card"><div class="day-lunch-card-av" style="background:${col.bg};color:${col.text}">${initials(c.name)}</div><div><div class="day-lunch-card-name">${c.name.split(' ')[0]}</div><div class="day-lunch-card-food" style="color:#a0aec0;font-style:italic">Not planned</div></div></div>`;
-      });
-      html+='</div>';
-    } else {
-      html+='<div style="font-size:0.78rem;color:#a0aec0;font-style:italic">No children added yet.</div>';
-    }
   }
   html+='</div>';
   document.getElementById('calBody').innerHTML=html;
@@ -529,8 +370,7 @@ function alertRow(ev,now){
   const costume=needsCostume(ev.title);
   const icon=costume?'🎭':'🛍️';
   const cosNote=costume?`<div style="font-size:.7rem;color:#78350f;margin-top:2px">👗 Costume required</div>`:'';
-  const pay=needsPayment(ev.title);
-  return `<div class="alert-item"><div class="alert-icon">${icon}</div><div><div class="alert-title">${ev.title}</div><div class="alert-date">${fmtDate(ev.start)}</div>${cosNote}<span class="alert-tag ${urg}">${txt}</span>${pay?scopayBtn(ev.title,true):''}</div></div>`;
+  return `<div class="alert-item"><div class="alert-icon">${icon}</div><div><div class="alert-title">${ev.title}</div><div class="alert-date">${fmtDate(ev.start)}</div>${cosNote}<span class="alert-tag ${urg}">${txt}</span></div></div>`;
 }
 function renderAlerts(){
   const now=new Date();now.setHours(0,0,0,0);
@@ -551,15 +391,14 @@ function renderUpcoming(){
   const up=filteredEvents.filter(ev=>ev.start>=tomorrow).sort((a,b)=>a.start-b.start).slice(0,8);
   let html='';
   up.forEach(ev=>{
-    const pay=needsPayment(ev.title);
-    html+=`<div class="alert-item"><div class="alert-icon">${evIcons[ev.type]||'📌'}</div><div><div class="alert-title">${ev.title.slice(0,50)}${ev.title.length>50?'…':''}</div><div class="alert-date">${fmtDate(ev.start)}</div>${pay?scopayBtn(ev.title,true):''}</div></div>`;
+    html+=`<div class="alert-item"><div class="alert-icon">${evIcons[ev.type]||'📌'}</div><div><div class="alert-title">${ev.title.slice(0,50)}${ev.title.length>50?'…':''}</div><div class="alert-date">${fmtDate(ev.start)}</div></div></div>`;
   });
   document.getElementById('upcomingList').innerHTML=html||'<div class="loading" style="padding:14px">No upcoming events</div>';
 }
 
 // ── EVENT MODAL ──
 function openModal(iso){
-  const d=new Date(iso),evs=eventsForDate(d),lunches=lunchesForDate(d);
+  const d=new Date(iso),evs=eventsForDate(d);
   document.getElementById('modalTitle').textContent=d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
   document.getElementById('modalDate').textContent=evs.length?`${evs.length} event${evs.length>1?'s':''}`:'No events';
   let html='';
@@ -568,120 +407,15 @@ function openModal(iso){
     const costume=needsCostume(ev.title);
     const note=ev.type==='action'?(costume?`<div class="event-action-note">🎭 Costume required.</div>`:`<div class="event-action-note">⚠️ May require bringing something.</div>`):'';
     const lnk=ev.url?`<div class="event-link"><a href="${ev.url}" target="_blank">More info →</a></div>`:'';
-    const pay=needsPayment(ev.title);
-    const payBlock=pay?`<div class="scopay-info">💳 <strong>Payment may be required</strong><div style="margin-top:6px">${scopayBtn(ev.title,false)}</div></div>`:'';
-    html+=`<div class="event-row"><div style="display:flex;gap:9px;align-items:flex-start"><div style="font-size:1.1rem;flex-shrink:0">${evIcons[ev.type]||'📌'}</div><div style="flex:1"><div class="event-name">${ev.title}</div>${note}${lnk}${payBlock}</div></div></div>`;
+    html+=`<div class="event-row"><div style="display:flex;gap:9px;align-items:flex-start"><div style="font-size:1.1rem;flex-shrink:0">${evIcons[ev.type]||'📌'}</div><div style="flex:1"><div class="event-name">${ev.title}</div>${note}${lnk}</div></div></div>`;
   });
-  // lunch
-  const isWe=[0,6].includes(d.getDay());
-  if(!isWe&&children.length){
-    html+=`<div class="event-row"><div class="modal-lunch-section"><h4><svg width="12" height="12" viewBox="0 0 24 24" fill="#78350f"><path d="M11 3H9v7c0 2.12 1.33 3.93 3.22 4.65L11 21h2l1.22-6.35C16.67 13.93 18 12.12 18 10V3h-2v5h-1V3h-2v5h-1V3zM6 3v9h2.5l-1 9H10l1-9H13V3H6z"/></svg>Lunch plan</h4><div class="modal-lunch-cards">`;
-    children.forEach((c,i)=>{
-      const col=AV_COLORS[i%AV_COLORS.length];
-      const key=isoDate(d);const food=c.lunches[key];
-      html+=`<div class="mlc"><div class="mlc-av" style="background:${col.bg};color:${col.text}">${initials(c.name)}</div><div><div class="mlc-name">${c.name.split(' ')[0]}</div>${food?`<div class="mlc-food">${food}</div>`:`<div class="mlc-empty">Not planned</div>`}</div></div>`;
-    });
-    html+='</div></div></div>';
-  }
   document.getElementById('modalEvents').innerHTML=html;
   document.getElementById('modalOverlay').classList.add('open');
-}
-
-// ── LUNCH PLANNER ──
-function openLunchPlanner(idx){
-  lpChildIdx=idx;
-  const c=children[idx];
-  document.getElementById('lpTitle').textContent=`${c.name}'s lunch plan`;
-  const now=new Date();now.setHours(0,0,0,0);
-  const mon=new Date(now);const dow=(mon.getDay()+6)%7;mon.setDate(mon.getDate()-dow);
-  const days=['Monday','Tuesday','Wednesday','Thursday','Friday'];
-  let html='';
-  for(let w=0;w<2;w++){
-    const ws=new Date(mon);ws.setDate(ws.getDate()+w*7);
-    html+=`<div class="lp-week-label">Week of ${ws.toLocaleDateString('en-GB',{day:'numeric',month:'short'})}</div>`;
-    for(let d=0;d<5;d++){
-      const date=new Date(ws);date.setDate(date.getDate()+d);
-      const key=isoDate(date);const val=c.lunches[key]||'';
-      const isToday=sameDay(date,now);const isPast=date<now&&!isToday;
-      html+=`<div class="lp-day-row">
-        <div class="lp-day-name">${days[d]}${isToday?'<span class="lp-today-tag">today</span>':''}</div>
-        <div class="lp-day-date">${date.toLocaleDateString('en-GB',{day:'numeric',month:'short'})}</div>
-        <input class="lp-input${val?' has-val':''}" type="text" data-key="${key}" value="${val}" placeholder="${isPast&&!val?'—':'e.g. pasta…'}" ${isPast&&!val?'disabled':''} oninput="this.classList.toggle('has-val',!!this.value)"/>
-      </div>`;
-    }
-  }
-  document.getElementById('lpBody').innerHTML=html;
-  document.getElementById('lpOverlay').classList.add('open');
-}
-function saveLunchPlan(){
-  const c=children[lpChildIdx];
-  document.querySelectorAll('#lpBody .lp-input').forEach(inp=>{
-    const key=inp.dataset.key;
-    if(inp.value.trim())c.lunches[key]=inp.value.trim();
-    else delete c.lunches[key];
-  });
-  document.getElementById('lpOverlay').classList.remove('open');
-  renderView();renderChildren();
-}
-
-// ── FAMILY ──
-function renderChildren(){
-  const list=document.getElementById('childrenList');
-  const msg=document.getElementById('noChildrenMsg');
-  if(!children.length){list.innerHTML='';msg.style.display='block';return;}
-  msg.style.display='none';
-  const today=isoDate(new Date());
-  list.innerHTML=children.map((c,i)=>{
-    const col=AV_COLORS[i%AV_COLORS.length];
-    const todayLunch=c.lunches[today];
-    return `<div class="child-row">
-      <div class="child-top">
-        <div class="child-avatar" style="background:${col.bg};color:${col.text}">${initials(c.name)}</div>
-        <div><div class="child-name-text">${c.name}</div><div class="child-year-text">${c.year}</div></div>
-        <button class="child-remove" onclick="removeChild(${i})">×</button>
-      </div>
-      ${todayLunch?`<div class="today-lunch-pill"><svg width="10" height="10" viewBox="0 0 24 24" fill="#78350f"><path d="M11 3H9v7c0 2.12 1.33 3.93 3.22 4.65L11 21h2l1.22-6.35C16.67 13.93 18 12.12 18 10V3h-2v5h-1V3h-2v5h-1V3zM6 3v9h2.5l-1 9H10l1-9H13V3H6z"/></svg>Today: ${todayLunch}</div>`:''}
-      <button class="lunch-plan-btn" onclick="openLunchPlanner(${i})">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="#78350f"><path d="M11 3H9v7c0 2.12 1.33 3.93 3.22 4.65L11 21h2l1.22-6.35C16.67 13.93 18 12.12 18 10V3h-2v5h-1V3h-2v5h-1V3zM6 3v9h2.5l-1 9H10l1-9H13V3H6z"/></svg>
-        Plan 2 weeks of lunches
-      </button>
-    </div>`;
-  }).join('');
-}
-function removeChild(idx){children.splice(idx,1);renderChildren();renderView();}
-function startAddChild(){
-  if(document.getElementById('addChildForm'))return;
-  const form=document.createElement('div');
-  form.id='addChildForm';form.className='add-child-form';
-  form.innerHTML=`<input type="text" id="newChildName" placeholder="Child's first name"/><select id="newChildYear"><option value="">Select year group…</option><option>Nursery</option><option>Reception</option><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option><option>Year 5</option><option>Year 6</option></select><div class="add-form-btns"><button class="btn-save" onclick="saveChild()">Save</button><button class="btn-cancel" onclick="cancelAdd()">Cancel</button></div>`;
-  document.getElementById('familyCard').appendChild(form);
-  document.getElementById('newChildName').focus();
-}
-function saveChild(){
-  const name=document.getElementById('newChildName').value.trim();
-  const year=document.getElementById('newChildYear').value;
-  if(!name||!year)return;
-  children.push({name,year,lunches:{}});cancelAdd();renderChildren();
-}
-function cancelAdd(){const f=document.getElementById('addChildForm');if(f)f.remove();}
-
-// ── SCOPAY ──
-function scopayBtn(title,small){
-  const url=scopayConnected?`${SCOPAY_URL}?ref=${encodeURIComponent(title.slice(0,40))}`:SCOPAY_URL;
-  return `<a href="${url}" target="_blank" class="scopay-btn"><svg viewBox="0 0 12 12"><path d="M1 3a1 1 0 011-1h8a1 1 0 011 1v1H1V3zm0 2h10v4a1 1 0 01-1 1H2a1 1 0 01-1-1V5zm2 2v1h2V7H3z"/></svg>${small?'Pay via ScoPay':'💳 Pay / book via ScoPay'}</a>`;
-}
-function connectScopay(){
-  const email=document.getElementById('scopayEmail').value.trim();
-  if(!email||!email.includes('@')){alert('Please enter a valid email.');return;}
-  scopayConnected=true;document.getElementById('scopayStatus').style.display='block';
-  renderAlerts();renderUpcoming();
 }
 
 // ── MODALS ──
 document.getElementById('modalClose').onclick=()=>document.getElementById('modalOverlay').classList.remove('open');
 document.getElementById('modalOverlay').onclick=e=>{if(e.target.id==='modalOverlay')document.getElementById('modalOverlay').classList.remove('open');};
-document.getElementById('lpClose').onclick=()=>document.getElementById('lpOverlay').classList.remove('open');
-document.getElementById('lpOverlay').onclick=e=>{if(e.target.id==='lpOverlay')document.getElementById('lpOverlay').classList.remove('open');};
 
 // ── DATA ──
 function parseIcal(text){
@@ -704,14 +438,14 @@ function loadFallback(){
   allEvents=raw.map(r=>({title:r.t,start:pd(r.d),end:r.e?pd(r.e):null,url:'',type:classify(r.t)}));
   filteredEvents=allEvents.slice();
   document.getElementById('statusBar').innerHTML=`<div class="status-dot"></div> ${allEvents.length} events loaded · Telferscot 2025–2026`;
-  renderView();renderAlerts();renderUpcoming();renderChildren();
+  renderView();renderAlerts();renderUpcoming();
 }
 async function loadCalendar(){
   try{
     const resp=await fetch(PROXY);const json=await resp.json();
     allEvents=parseIcal(json.contents);filteredEvents=allEvents.slice();
     document.getElementById('statusBar').innerHTML=`<div class="status-dot"></div> Live · ${allEvents.length} events`;
-    renderView();renderAlerts();renderUpcoming();renderChildren();
+    renderView();renderAlerts();renderUpcoming();
   }catch(e){loadFallback();}
 }
 loadCalendar();
